@@ -1,11 +1,11 @@
 <h1>Todos</h1>
 
-<button (click)="getTodos()">Click this to get the todos (PS: Also a refresh button)</button>
+<button (click)="getTodos()">Get todos</button>
 <ul>
   <li *ngFor="let todo of todos">
     Todo nr: {{todo.id}};
     Summary: "{{ todo.summary }}";
-    Descripton: "{{ todo.description }}"
+    Description: "{{ todo.description }}"
     <button (click)="deleteTodo(todo.id)">Delete this todo</button>
   </li>
 </ul>

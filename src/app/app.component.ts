@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    title = 'expass6';
+    title = 'Todos';
 
     summary: string = '';
     description: string = '';
