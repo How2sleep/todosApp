@@ -1,0 +1,21 @@
+<h1>Todos</h1>
+
+<button (click)="getTodos()">Click this to get the todos (PS: Also a refresh button)</button>
+<ul>
+  <li *ngFor="let todo of todos">
+    Todo nr: {{todo.id}};
+    Summary: "{{ todo.summary }}";
+    Descripton: "{{ todo.description }}"
+    <button (click)="deleteTodo(todo.id)">Delete this todo</button>
+  </li>
+</ul>
+<div>New Todo</div>
+<form (ngSubmit)="addTodo()">
+  <label for="summary">Summary</label>
+  <input type="text" id="summary" name="summary" [(ngModel)]="summary" />
+
+  <label for="description">Description</label>
+  <input type="text" id="description" name="description" [(ngModel)]="description" />
+
+  <button type="submit">Add Todo</button>
+</form>
